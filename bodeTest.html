@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html>
+    
+<script type='text/javascript'>
+
+function showPic(pic)
+{
+    alert("test")
+    var divShow = document.getElementById("divShow"); 
+    var showImg = document.getElementById("showIt"); 
+    showImg.src = pic;
+    divShow.style.display = "block"
+}
+
+</script>    
+    
+    
 <head>
 <style>
 div.img {
@@ -48,17 +63,7 @@ div.imageViewer img {
 </style>
 
 
-<script type='text/javascript'>
 
-function showPic(pic)
-{
-    var divShow = document.getElementById("divShow"); 
-    var showImg = document.getElementById("showIt"); 
-    showImg.src = pic;
-    divShow.style.display = "block"
-}
-
-</script>
 
 
 
@@ -87,7 +92,7 @@ function showPic(pic)
 </div>
 
 <div class="img">
-  <a  onclick='showPic("images/bode (2).jpg")'>
+  <a onclick='showPic("images/bode (2).jpg")'>
     <img src="thumbnails/bode (2)_thumbnail.jpg" alt="bode" >
   </a>
   <div class="desc">2</div>
@@ -315,4 +320,4 @@ function showPic(pic)
 </body>
 </html>
 
-Enter file contents here
+
