@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<script type='text/javascript'>
+function showPic(pic)
+{
+var divShow = document.getElementById('divShow');
+var showImg = document.getElementById('showIt');
+alert(pic)
+showImg.src = pic;
+}
+</script>
+<style>
+div.img {    margin: 5px;    border: 1px solid #ccc;     float: left;     width: 180px;     background:white;     }
+div.img:hover {
+border: 1px solid #777;
+}
+div.img img {
+width: 100%;
+height: auto;
+}
+div.desc {
+padding: 5px;
+text-align: center;
+background:white;
+font-family: 'Arial';
+}
+p {
+font-family: 'Arial Black';
+font-weight: bold;
+font-size: 30px;
+}
+div.imageViewer img {
+width: 50%;
+height: auto;
+}
+#showit {
+}
+</style>
+</head>
+<body bgcolor= #dbdbdb>
+<div align='center'>
+<div>
+<p>Beach Located on South Lake Tahoe, CA</p>
+</div>
+<div align='center' id='divShow' class='imageViewer'>
+<img id='showIt' src='https://bwcarberry.github.io/CaliforniaTrip2016/images/beach1 (1).jpg'
+></div>
+<div class='img'>
+<a onclick='showPic('https://bwcarberry.github.io/CaliforniaTrip2016/images/beach1 (1).jpg')'>
+<img src='https://bwcarberry.github.io/CaliforniaTrip2016/thumbnails/beach1 (1)_thumbnail.jpg'>
+</a>
+<div class='desc'>1</div>
+</div>
+<div class='img'>
+<a onclick='showPic('https://bwcarberry.github.io/CaliforniaTrip2016/images/beach1 (2).jpg')'>
+<img src='https://bwcarberry.github.io/CaliforniaTrip2016/thumbnails/beach1 (2)_thumbnail.jpg'>
+</a>
+<div class='desc'>2</div>
+</div>
+<div class='img'>
+<a onclick='showPic('https://bwcarberry.github.io/CaliforniaTrip2016/images/beach1 (3).jpg')'>
+<img src='https://bwcarberry.github.io/CaliforniaTrip2016/thumbnails/beach1 (3)_thumbnail.jpg'>
+</a>
+<div class='desc'>3</div>
+</div>
+</div></div></body></html>
