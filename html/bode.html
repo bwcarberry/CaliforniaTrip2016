@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+function showPic(pic)
+{
+var divShow = document.getElementById("divShow");
+var showImg = document.getElementById("showIt");
+showImg.src = pic;
+}
+function showNextPic()
+{;
+var showImg = document.getElementById("showIt");
+var arrowNext = document.getElementById("NextPic");
+src = showImg.src;
+srcNum = src.split("(")[1].substring(0, 2);
+if (srcNum.slice(-1) == ")"){;
+   srcNum = src.split("(")[1].substring(0, 1);
+};
+new_srcNum = Number(srcNum) + 1;
+if (new_srcNum < 30)
+{;
+arrowNext.style.display = 'block';
+new_src = src.split("%20")[0] + "%20(" + new_srcNum + ")" + ".jpg" ;
+showImg.src = new_src;
+};
+if (new_srcNum >= 29) {
+arrowNext.style.display = 'none';
+new_src = src.split("%20")[0] + "%20(" + new_srcNum + ")" + ".jpg" ;
+}
+if (new_srcNum > 1){
+LastPic.style.display = 'block';
+}
+if (new_srcNum == 1){
+LastPic.style.display = 'none';
+}
+};
+function showLastPic()
+{;
+var showImg = document.getElementById("showIt");
+src = showImg.src;
+srcNum = src.split("(")[1].substring(0, 2);
+if (srcNum.slice(-1) == ")"){;
+   srcNum = src.split("(")[1].substring(0, 1);
+};
+new_srcNum = Number(srcNum) - 1;
+new_src = src.split("%20")[0] + "%20(" + new_srcNum + ")" + ".jpg" ;
+showImg.src = new_src;
+if (new_srcNum <= 29) {
+NextPic.style.display = 'block';
+}
+if (new_srcNum == 1){
+LastPic.style.display = 'none';
+}
+};
+</script>
+<style>
+div.img {    margin: 5px;    border: 1px solid #ccc;     float: center;     width: 180px;     background:white;     }
+div.img:hover {
+border: 1px solid #777;
+}
+div.img img {
+width: 100%;
+height: auto;
+}
+div.desc {
+padding: 5px;
+text-align: center;
+background:white;
+font-family: "Arial";
+}
+p {
+font-family: "Arial Black";
+font-weight: bold;
+font-size: 30px;
+}
+.imageViewer {
+width: 65%;
+height: auto;
+}
+#showit {
+}
+</style>
+</head>
+<body bgcolor= #dbdbdb>
+<div align="center">
+<div>
+<a name="fullImage"></a><p>Bodie State Park, CA</p>
+<input type="button" value="Close Window" onClick="self.close()">
+</div>
+<table align="center" id="divShow" >
+<tr align="center">
+<td align="center">
+<a href="#fullImage" onclick='showLastPic()'>
+<img style="display:none"  id="LastPic"  src="https://bwcarberry.github.io/CaliforniaTrip2016/images/scroll-left.gif">
+</a>
+</td>
+<td align="center">
+<img class="imageViewer" border="2" id="showIt" src="https://bwcarberry.github.io/CaliforniaTrip2016/photo/bode (1).jpg">
+</td>
+<td align="center">
+<a href="#fullImage" onclick='showNextPic()'><img id="NextPic"  src="https://bwcarberry.github.io/CaliforniaTrip2016/images/scroll-right.gif">
+</a></td>
+</tr>
+<tr align="center">
+<td align="center">
+</td>
+<td valign="top" align="center">
+<h4></h4>
+</td>
+<td align="center">
+</td>
+</tr>
+</table>
+</div></div><div>
+</body></html>
