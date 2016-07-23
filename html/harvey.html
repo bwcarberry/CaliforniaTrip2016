@@ -17,13 +17,13 @@ if (srcNum.slice(-1) == ")"){;
    srcNum = src.split("(")[1].substring(0, 1);
 };
 new_srcNum = Number(srcNum) + 1;
-if (new_srcNum < 6)
+if (new_srcNum < 2)
 {;
 arrowNext.style.display = 'block';
 new_src = src.split("%20")[0] + "%20(" + new_srcNum + ")" + ".jpg" ;
 showImg.src = new_src;
 };
-if (new_srcNum >= 5) {
+if (new_srcNum >= 1) {
 arrowNext.style.display = 'none';
 new_src = src.split("%20")[0] + "%20(" + new_srcNum + ")" + ".jpg" ;
 }
@@ -45,7 +45,7 @@ if (srcNum.slice(-1) == ")"){;
 new_srcNum = Number(srcNum) - 1;
 new_src = src.split("%20")[0] + "%20(" + new_srcNum + ")" + ".jpg" ;
 showImg.src = new_src;
-if (new_srcNum <= 5) {
+if (new_srcNum <= 1) {
 NextPic.style.display = 'block';
 }
 if (new_srcNum == 1){
@@ -84,7 +84,7 @@ height: auto;
 <body bgcolor= #dbdbdb>
 <div align="center">
 <div>
-<a name="fullImage"></a><p>Bishop, CA</p>
+<a name="fullImage"></a><p>Harvey's Casino, Stateline, NV</p>
 <input type="button" value="Click Here to return to the map tour" onClick="self.close()">
 </div>
 <table align="center" id="divShow" >
@@ -95,7 +95,7 @@ height: auto;
 </a>
 </td>
 <td align="center">
-<img class="imageViewer" border="2" id="showIt" src="https://bwcarberry.github.io/CaliforniaTrip2016/photo/bishop (1).jpg">
+<img class="imageViewer" border="2" id="showIt" src="https://bwcarberry.github.io/CaliforniaTrip2016/photo/harvey (1).jpg">
 </td>
 <td align="center">
 <a href="#fullImage" onclick='showNextPic()'><img title="Click to Advance" id="NextPic"  src="https://bwcarberry.github.io/CaliforniaTrip2016/images/scroll-right.gif">
