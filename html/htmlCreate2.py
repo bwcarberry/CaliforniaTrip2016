@@ -55,7 +55,7 @@ for img in picList:
     htmlFile.write("<!DOCTYPE html>\n")
 
     htmlFile.write("<html>\n")
-
+    htmlFile.write("<title>Picture Viewer</title>\n")
 
 
     htmlFile.write("<script type=\"text/javascript\">\n")
@@ -274,7 +274,7 @@ for img in picList:
     htmlFile.write("<p id=\"picTitle\">" + imgTitle + "</p>\n")
     htmlFile.write("<a href=\"#fullImage\" >\n")
     #htmlFile.write("<a href=\"#fullImage\" onclick=\"self.close()\"\n>")
-    htmlFile.write("<img  onclick='alert(\"To return to the map tour, close this picture viewer page.  Do not click the back button.\")'  title=\"Return to the map tour\"   id=\"ExitPic\"  src=\"" + imgPath + "exit.jpg" +"\">\n")
+    htmlFile.write("<img  onclick='alert(\"To return to the map tour, close the tab titled Picture Viewer.  Do not click the back button.\")'  title=\"Return to the map tour\"   id=\"ExitPic\"  src=\"" + imgPath + "exit.jpg" +"\">\n")
     htmlFile.write("</a>\n")
 
 
