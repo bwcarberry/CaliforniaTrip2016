@@ -19,19 +19,19 @@ if (srcNum.slice(-1) == ")"){;
 new_srcNum = Number(srcNum) + 1;
 if (new_srcNum < 2)
 {;
-arrowNext.style.display = 'block';
+arrowNext.style.visibility = 'visible';
 new_src = src.split("%20")[0] + "%20(" + new_srcNum + ")" + ".jpg" ;
 showImg.src = new_src;
 };
 if (new_srcNum >= 1) {
-arrowNext.style.display = 'none';
+arrowNext.style.visibility = 'hidden';
 new_src = src.split("%20")[0] + "%20(" + new_srcNum + ")" + ".jpg" ;
 }
 if (new_srcNum > 1){
-LastPic.style.display = 'block';
+LastPic.style.visibility = 'visible';
 }
 if (new_srcNum == 1){
-LastPic.style.display = 'none';
+LastPic.style.visibility = 'hidden';
 }
 };
 function showLastPic()
@@ -46,10 +46,10 @@ new_srcNum = Number(srcNum) - 1;
 new_src = src.split("%20")[0] + "%20(" + new_srcNum + ")" + ".jpg" ;
 showImg.src = new_src;
 if (new_srcNum <= 1) {
-NextPic.style.display = 'block';
+NextPic.style.visibility = 'visible';
 }
 if (new_srcNum == 1){
-LastPic.style.display = 'none';
+LastPic.style.visibility = 'hidden';
 }
 };
 </script>
@@ -79,26 +79,45 @@ height: auto;
 }
 #showit {
 }
+#LastPic{
+ width:50%;
+}
+#NextPic{
+ width:50%;
+}
+#ExitPic{
+ width:10%;
+}
+#picTitle{
+border: 5px solid white;
+border-radius: 10px;
+background-color: #308446;
+color: white;
+width: 35%;
+padding: 5px 0px 5px 0px;
+}
 </style>
 </head>
 <body bgcolor= #dbdbdb>
 <div align="center">
 <div>
-<a name="fullImage"></a><p>Beach in San Franscico, CA</p>
-<input type="button" value="Click Here to return to the map tour" onClick="self.close()">
+<a name="fullImage"></a><p id="picTitle">Beach in San Franscico, CA</p>
+<a href="#fullImage" >
+<img  onclick='alert("To return to the map tour, close this picture viewer page.  Do not click the back button.")'  title="Return to the map tour"   id="ExitPic"  src="https://bwcarberry.github.io/CaliforniaTrip2016/photo/exit.jpg">
+</a>
 </div>
 <table align="center" id="divShow" >
 <tr align="center">
 <td align="center">
 <a href="#fullImage" onclick='showLastPic()'>
-<img  title="Click to go back"style="display:none"  id="LastPic"  src="https://bwcarberry.github.io/CaliforniaTrip2016/images/scroll-left.gif">
+<img  title="Click to go back"style="visibility:hidden"  id="LastPic"  src="https://bwcarberry.github.io/CaliforniaTrip2016/photo/left.jpg">
 </a>
 </td>
 <td align="center">
 <img class="imageViewer" border="2" id="showIt" src="https://bwcarberry.github.io/CaliforniaTrip2016/photo/sanfran_beach (1).jpg">
 </td>
 <td align="center">
-<a href="#fullImage" onclick='showNextPic()'><img title="Click to Advance" id="NextPic"  src="https://bwcarberry.github.io/CaliforniaTrip2016/images/scroll-right.gif">
+<a href="#fullImage" onclick='showNextPic()'><img title="Click to Advance" id="NextPic"  src="https://bwcarberry.github.io/CaliforniaTrip2016/photo/right.jpg">
 </a></td>
 </tr>
 <tr align="center">

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<script type='text/javascript'>
+
+function showPic(pic)
+
+{
+
+    
+    var divShow = document.getElementById("divShow");
+ 
+       var showImg = document.getElementById("showIt");
+ 
+    
+    showImg.src = pic;
+}
+</script>  
+
+div.img:hover {
+
+    border: 1px solid #777;
+
+}
+
+
+div.img img {
+
+    width: 100%;
+
+    height: auto;
+
+}
+
+
+div.desc {
+
+    padding: 5px;
+
+    text-align: center;
+
+    background:white;
+
+    font-family: "Arial";
+
+}
+
+
+
+p {
+
+    font-family: "Arial Black";
+
+    font-weight: bold;
+
+    font-size: 30px;
+
+}
+
+
+
+div.imageViewer img {
+
+    width: 50%;
+
+    height: auto;
+
+   
+}
+
+
+#showit {
+
+   
+}
+
+
+
+
+</style>
+ 
+
+</head>
+
+<body bgcolor= #dbdbdb>
+
+
+
+<div align="center">
+
+
+<div>
+
+    <p>Bode State Park, California</p>
+
+
+</div>
+
+<div align="center" id="divShow" class="imageViewer">
+
+
+    <img id="showIt" src="images/bode (2).jpg"  >
+
+
+</div>
+
+<div class="img">
+
+  <a onclick='showPic("images/bode (2).jpg")'>
+
+    <img src="thumbnails/bode (2)_thumbnail.jpg" alt="bode" >
+  </a>
+
+  <div class="desc">2</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</body>
+
+</html>
+
+
+
+
+
+ 
